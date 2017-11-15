@@ -21,8 +21,6 @@
 		$scope.displayValues = function function_name(){
 			var foodstring = trimString($scope.food);
 			var noOfItems = countFood(foodstring);
- 
-			$scope.noOfItems = noOfItems;
 			$scope.msg = generateMsg(noOfItems);
 		}
 
