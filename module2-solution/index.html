@@ -52,7 +52,7 @@
         {{ item.quantity }} of {{ item.name }}
 </li>
      </ul>
-     <div ng-if="boughtList.errorMessage" class="emptyMessage">{{boughtList.errorMessage}}</div>
+     <div ng-if="boughtList.boughtItems.length==0" class="emptyMessage">{{boughtList.errorMessage}}</div>
     </div>
   </div>
 </div>
