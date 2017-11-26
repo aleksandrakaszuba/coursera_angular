@@ -25,7 +25,7 @@
         var boughtList = this;
         boughtList.boughtItems = ShoppingListCheckOffService.getItemesBought();
         boughtList.errorMessage = ShoppingListCheckOffService.errorHandler2();
-        console.log(boughtList.error);
+        
     }
 
     function ShoppingListCheckOffService() {
@@ -54,10 +54,9 @@
 
         var itemsToBuy = [item1, item2, item3, item4, item5];
         var boughtItems = [];
-        var error1 = "Everything is bought!";
-        var error2 = "3";
-        var error = [];
-        error = ["Nothing is bought yet!"];
+        var error1 ;
+        var error2 ;
+ 
 
         service.getItemesToBuy = function(itemIndex) {
             return itemsToBuy;
@@ -65,9 +64,7 @@
         service.getItemesBought = function() {
             return boughtItems;
         };
-        service.geterr = function() {
-            return error;
-        };
+        
 
         service.errorHandler1 = function() {
             if (itemsToBuy.length == 0) {
@@ -85,9 +82,7 @@
         };
 
         service.buyItem = function(itemIndex) {
-            if (boughtItems.length == 0) {
-                error.pop();
-            }
+            
             boughtItems.push(itemsToBuy[itemIndex]);
             itemsToBuy.splice(itemIndex, 1);
 
